@@ -15,6 +15,7 @@ This repository powers the official pre-launch loading and placeholder web prese
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) with `@tailwindcss/vite`
 - **Legacy Browser Support:** `@vitejs/plugin-legacy` with Babel and `core-js` polyfills (Chrome 58+, Firefox 57+, Safari 11+, Edge 16+)
 - **Typography:** 100% self-hosted fonts via Fontsource (`Space Grotesk` & `JetBrains Mono`)
+- **Deployment:** [Cloudflare Workers](https://workers.cloudflare.com/) via Wrangler (static assets binding)
 - **SEO & Structured Data:** Semantic HTML5, Schema.org `Organization` / `WebSite` JSON-LD graph, Open Graph, Twitter Cards, `robots.txt`, and XML sitemap.
 - **Design System:** Impeccable Aviation Black Box & Flight Recorder aesthetic ([DESIGN.md](./DESIGN.md)).
 
@@ -57,6 +58,22 @@ Preview the production build locally:
 pnpm preview
 ```
 
+### Deploying to Cloudflare Workers
+
+1. Authenticate with your Cloudflare account (first time only):
+
+```bash
+pnpm wrangler login
+```
+
+2. Build and deploy to Cloudflare Workers:
+
+```bash
+pnpm deploy
+```
+
+*(In automated CI/CD pipelines, set the `CLOUDFLARE_API_TOKEN` environment variable and run `pnpm deploy`).*
+
 ### Quality Audit
 
 Scan built pages against the Impeccable design system detector:
@@ -81,4 +98,3 @@ pnpm check
 ## 📄 License
 
 MIT © [Explodenot](https://explodenot.com)
-

@@ -13,7 +13,7 @@ dist/
 .impeccable/config.local.json
 .impeccable/mocks/
 
-# Cloudflare Wrangler
+# Cloudflare Wrangler & Workers
 .wrangler/
 
 # System and editor files
@@ -23,4 +23,3 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 .idea/
-

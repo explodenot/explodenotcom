@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-11-10
+
+### Added
+- Cloudflare Workers deployment configuration (`wrangler.toml`) configured with static assets binding (`./dist`).
+- Added `pnpm deploy` script (`astro build && wrangler deploy`) for automated build and edge deployment.
+- Added `.wrangler/` cache directory to `.gitignore`.
+
+### Changed
+- Updated LinkedIn company URL to canonical format `https://www.linkedin.com/company/explodenot/`.
+- Updated documentation with Cloudflare deployment workflows and authentication steps.
+
+---
+
 ## [1.0.0] - 2026-11-10
 
 ### Added
@@ -21,4 +34,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Crawling directives (`robots.txt`) and XML sitemap (`sitemap.xml`).
 - Direct founder links to [viruchith.com](https://viruchith.com) and contact mailto (`hello@explodenot.com`).
 - Official social community links for GitHub, LinkedIn, and X.
-
