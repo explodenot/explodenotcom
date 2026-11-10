@@ -5,10 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-11-10
+
+### Added
+- Integrated Google Tag Manager (`GTM-N6K4B3M7`) container into `<head>`.
+- Configured `.npmrc` and `pnpm-workspace.yaml` with build script approvals for `esbuild`, `workerd`, and `core-js` to support automated CI/CD and Cloudflare builds.
+
+### Fixed
+- Fixed assets-only Cloudflare Workers deployment configuration by removing asset binding in `wrangler.toml`.
+
+---
+
 ## [1.1.0] - 2026-11-10
 
 ### Added
-- Cloudflare Workers deployment configuration (`wrangler.toml`) configured with static assets binding (`./dist`).
+- Cloudflare Workers deployment configuration (`wrangler.toml`) configured with static assets directory (`./dist`).
 - Added `pnpm deploy` script (`astro build && wrangler deploy`) for automated build and edge deployment.
 - Added `.wrangler/` cache directory to `.gitignore`.
 
