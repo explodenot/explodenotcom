@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.astro/
+
+# Environment and local configs
+.env
+.env.*
+!.env.example
+.impeccable/config.local.json
+.impeccable/mocks/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea/

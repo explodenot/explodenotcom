@@ -1,0 +1,43 @@
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-base: #0b0f12;
+    --color-panel: #131a20;
+    --color-panel-border: #1f2c37;
+    --color-orange: #ff5722;
+    --color-phosphor: #00e676;
+    --color-text-main: #e2e8f0;
+    --color-text-muted: #8899a6;
+  }
+
+  ::selection {
+    background-color: #ff5722;
+    color: #0b0f12;
+  }
+
+  /* Self-hosted custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0f12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f2c37;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff5722;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,125 @@
+{
+  "title": "Choose the visual world for Explodenot",
+  "question": "The roll assigned candidate #5: Control Console & Annunciator Light Panel. Keep it, choose an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Industrial Annunciator & Control Console",
+      "kicker": "THE ROLL",
+      "lineage": "Power station control consoles & annunciator alarm light tiles",
+      "thesis": "The quiet confidence of a system running at nominal steady-state: deadpan, backlit, crisis-proof.",
+      "palette": [
+        "#18201a",
+        "#2d4034",
+        "#52b788",
+        "#f4f1de"
+      ],
+      "materials": [
+        "powder-coated olive metal",
+        "backlit acrylic status tiles",
+        "rotary switches"
+      ],
+      "viewport": "A calming illuminated status annunciator panel: ALL SYSTEMS NOMINAL, software that doesn\u2019t go boom.",
+      "risk": "Can veer overly retro-skeuomorphic if the web geometry and type aren\u2019t razor sharp.",
+      "raised": [
+        {
+          "from": "wayfinding-cartography-signage-terminal-yellow-wayfinding",
+          "raise": "Strict high-contrast edge discipline and architectural typographic clarity across all status tiles."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Aviation Black Box & Flight Recorder Log",
+      "kicker": "IMPECCABLE\u2019S PICK",
+      "lineage": "Cockpit flight data recorders, accident-prevention telematics",
+      "thesis": "Safety engineering as a calm, unshakeable instrument: survive any crash, diagnose any fault.",
+      "palette": [
+        "#0f1416",
+        "#ff5722",
+        "#e2e8f0",
+        "#00e676"
+      ],
+      "materials": [
+        "bright orange crash-proof steel casing",
+        "etched serial stamps",
+        "tabular telematics"
+      ],
+      "viewport": "An indestructible black box focal unit in pristine safety orange with real-time zero-incident telematics.",
+      "risk": "High familiarity in developer infrastructure branding (observability/metrics dashboard trope)."
+    },
+    {
+      "id": "challenger-airport",
+      "kind": "challenger",
+      "catalogId": "wayfinding-cartography-signage-terminal-yellow-wayfinding",
+      "label": "Airport Wayfinding & Terminal Gate System",
+      "verdict": "competitive",
+      "lineage": "Airport concourse overhead signage and gate guidance",
+      "thesis": "Wayfinding through chaos: massive high-contrast directional signals where failure is not an option.",
+      "palette": [
+        "#ffcc00",
+        "#111111",
+        "#ffffff",
+        "#222222"
+      ],
+      "materials": [
+        "enamel yellow overhead panels",
+        "monumental gate numerals"
+      ],
+      "viewport": "A stark overhead sign banner directing traffic seamlessly to nominal uptime and owner attribution.",
+      "case": "Fuses cleanly: incident prevention as unambiguous directional clarity.",
+      "risk": "Can feel too institutional if not counterbalanced by Explodenot\u2019s wry humor."
+    },
+    {
+      "id": "challenger-warm-app",
+      "kind": "challenger",
+      "catalogId": "digital-design-canon-warm-consumer-app-surface",
+      "label": "Warm Humanist Consumer App Surface",
+      "verdict": "declined",
+      "lineage": "Friendly soft-cornered SaaS cards",
+      "palette": [
+        "#fefae0",
+        "#283618",
+        "#606c38"
+      ],
+      "materials": [
+        "soft card radii",
+        "warm paper tinted ground"
+      ],
+      "case": "Fails product positioning: software that doesn\u2019t go boom needs industrial technical gravitas, not pastel softness.",
+      "kept": "Strict restriction of accent color solely to actionable elements."
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "Modern Tech Inc. Dark Mode",
+    "thesis": "The ubiquitous Vercel/Linear dark developer aesthetic executed cleanly.",
+    "palette": [
+      "#000000",
+      "#111111",
+      "#ffffff",
+      "#3b82f6"
+    ],
+    "materials": [
+      "subtle borders",
+      "inter display type",
+      "monochrome backdrop"
+    ],
+    "viewport": "Dark centered headline with glowing blue badge and card grid.",
+    "risk": "Entirely indistinguishable from every other developer tool."
+  },
+  "steer": true
+}

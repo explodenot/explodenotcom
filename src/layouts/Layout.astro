@@ -1,0 +1,134 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Explodenot // Resilient, Scalable & Secure Enterprise Software Development",
+  description = "Explodenot is an enterprise software development company engineered for extreme resilience, high scalability, and mission-critical security. Fewer fireworks, more sleep.",
+} = Astro.props;
+
+const siteUrl = "https://explodenot.com";
+const ownerUrl = "https://viruchith.com";
+
+const socialLinks = [
+  "https://github.com/explodenot",
+  "https://www.linkedin.com/company/explodenot/",
+  "https://x.com/explodenot"
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Explodenot",
+      "url": siteUrl,
+      "logo": `${siteUrl}/logo.png`,
+      "image": `${siteUrl}/logo.png`,
+      "description": description,
+      "email": "hello@explodenot.com",
+      "sameAs": socialLinks,
+      "founder": {
+        "@type": "Person",
+        "@id": `${ownerUrl}/#person`,
+        "name": "Viruchith",
+        "url": ownerUrl
+      },
+      "knowsAbout": [
+        "Enterprise Software Development",
+        "High-Availability Systems Architecture",
+        "Software Reliability Engineering",
+        "Scalable Cloud Infrastructure",
+        "Application Security & Resilience"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "Explodenot",
+      "description": description,
+      "publisher": {
+        "@id": `${siteUrl}/#organization`
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      "url": siteUrl,
+      "name": title,
+      "description": description,
+      "isPartOf": {
+        "@id": `${siteUrl}/#website`
+      },
+      "about": {
+        "@id": `${siteUrl}/#organization`
+      }
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en" class="bg-[#0b0f12] text-[#e2e8f0] antialiased selection:bg-[#ff5722] selection:text-[#0b0f12]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Self-hosted favicons and touch icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0b0f12" />
+
+    <link rel="canonical" href={siteUrl} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="enterprise software development, resilient software, scalable systems, secure software architecture, software reliability, fault-tolerant engineering, high uptime" />
+    <meta name="author" content="Viruchith" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:site_name" content="Explodenot" />
+    <meta property="og:image" content={`${siteUrl}/logo.png`} />
+    
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@explodenot" />
+    <meta name="twitter:creator" content="@explodenot" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/logo.png`} />
+    
+    <!-- JSON-LD Structured Data for Enterprise / Organization SEO -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="min-h-screen bg-[#0b0f12] text-[#e2e8f0] font-sans flex flex-col justify-between overflow-x-hidden selection:bg-[#ff5722] selection:text-[#0b0f12]">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .avionics-rivets {
+    background-image: radial-gradient(#1f2c37 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+</style>
