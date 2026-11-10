@@ -81,3 +81,4 @@ pnpm check
 ## 📄 License
 
 MIT © [Explodenot](https://explodenot.com)
+
