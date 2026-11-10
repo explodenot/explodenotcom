@@ -13,6 +13,9 @@ dist/
 .impeccable/config.local.json
 .impeccable/mocks/
 
+# Cloudflare Wrangler
+.wrangler/
+
 # System and editor files
 .DS_Store
 Thumbs.db

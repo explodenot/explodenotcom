@@ -1,0 +1,5 @@
+name = "explodenotcom"
+compatibility_date = "2026-11-10"
+
+# Serve static assets produced by Astro in dist/
+assets = { directory = "./dist", binding = "ASSETS" }
